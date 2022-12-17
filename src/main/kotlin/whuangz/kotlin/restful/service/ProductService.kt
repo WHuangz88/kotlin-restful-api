@@ -1,6 +1,7 @@
 package whuangz.kotlin.restful.service
 
 import whuangz.kotlin.restful.model.CreateProductRequest
+import whuangz.kotlin.restful.model.ListProductRequest
 import whuangz.kotlin.restful.model.ProductResponse
 import whuangz.kotlin.restful.model.UpdateProductRequest
 
@@ -9,4 +10,5 @@ interface ProductService {
     fun get(id: String): ProductResponse
     fun update(id: String, request: UpdateProductRequest): ProductResponse
     fun delete(id: String)
+    fun list(request: ListProductRequest): List<ProductResponse>
 }

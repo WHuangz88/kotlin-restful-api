@@ -72,3 +72,15 @@ Accept: application/json
 ### Delete Product Not Found
 DELETE http://localhost:8080/api/products/A0002
 Accept: application/json
+
+### Get Products
+GET http://localhost:8080/api/products
+Accept: application/json
+
+### Get Product with size
+GET http://localhost:8080/api/products?size=5
+Accept: application/json
+
+### Get Product with size and page
+GET http://localhost:8080/api/products?size=5&page=1
+Accept: application/json
