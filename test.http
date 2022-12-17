@@ -63,3 +63,12 @@ Accept: application/json
   "price": 33000000,
   "quantity": -15
 }
+
+
+### Delete Product Success
+DELETE http://localhost:8080/api/products/A0001
+Accept: application/json
+
+### Delete Product Not Found
+DELETE http://localhost:8080/api/products/A0002
+Accept: application/json
