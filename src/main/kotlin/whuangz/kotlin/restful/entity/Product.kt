@@ -14,17 +14,17 @@ data class Product(
     val id: String,
 
     @Column(name="name")
-    val name: String,
+    var name: String,
 
     @Column(name="price")
     var price: Long,
 
     @Column(name="quantity")
-    val quantity: Int,
+    var quantity: Int,
 
     @Column(name="created_at")
     val createdAt: Date,
 
     @Column(name="updated_at")
-    val updatedAt: Date?
+    var updatedAt: Date?
 )

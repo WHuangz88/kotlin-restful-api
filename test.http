@@ -28,3 +28,38 @@ Accept: application/json
 ### Get Product not found
 GET http://localhost:8080/api/products/A0002
 Accept: application/json
+
+
+### Update Product
+PUT http://localhost:8080/api/products/A0001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Macbook Pro 15",
+  "price": 33000000,
+  "quantity": 15
+}
+
+### Update Product Not Found
+PUT http://localhost:8080/api/products/A0002
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Macbook Pro 15",
+  "price": 33000000,
+  "quantity": 15
+}
+
+
+### Update Product Invalid Body
+PUT http://localhost:8080/api/products/A0001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Macbook Pro 15",
+  "price": 33000000,
+  "quantity": -15
+}
