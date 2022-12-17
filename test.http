@@ -1,0 +1,30 @@
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "A0001",
+  "name": "Macbook Pro 15",
+  "price": 30000000,
+  "quantity": 10
+}
+
+###
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "A0001",
+  "name": "Macbook Pro 15",
+  "price": 0,
+  "quantity": -10
+}
+
+### Get Product
+GET http://localhost:8080/api/products/A0001
+Accept: application/json
+
+### Get Product not found
+GET http://localhost:8080/api/products/A0002
+Accept: application/json
