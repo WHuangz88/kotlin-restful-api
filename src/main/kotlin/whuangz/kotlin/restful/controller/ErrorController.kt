@@ -4,6 +4,7 @@ import jakarta.validation.ConstraintViolationException
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 import whuangz.kotlin.restful.error.NotFoundException
+import whuangz.kotlin.restful.error.UnAuthorizedException
 import whuangz.kotlin.restful.model.WebResponse
 
 @RestControllerAdvice
@@ -23,6 +24,14 @@ class ErrorController {
             code = 404,
             status = "NOT FOUND",
             data = "Not Found"
+        )
+    }
+    @ExceptionHandler(value= [UnAuthorizedException::class])
+    fun unAuthroizedException(unAuthorizedException: UnAuthorizedException): WebResponse<String> {
+        return WebResponse(
+            code = 401,
+            status = "UNAUTHORIZED",
+            data = "Please input your X-Api-Key"
         )
     }
 }

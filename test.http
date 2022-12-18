@@ -1,4 +1,5 @@
 POST http://localhost:8080/api/products
+X-Api-Key: SECRET
 Content-Type: application/json
 Accept: application/json
 
@@ -24,6 +25,7 @@ Accept: application/json
 ### Get Product
 GET http://localhost:8080/api/products/A0001
 Accept: application/json
+X-Api-Key: SECRET
 
 ### Get Product not found
 GET http://localhost:8080/api/products/A0002
